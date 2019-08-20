@@ -48,4 +48,8 @@ final_cart = consolidate_cart(cart)
 all_coupons = apply_coupons(cart, coupons) 
 all_clearance = apply_clearance(cart)
 
+clearance_cart.each do |item, attribute_hash| 
+  total += (attribute_hash[:price] * attribute_hash[:count]) 
+end
+
 end
