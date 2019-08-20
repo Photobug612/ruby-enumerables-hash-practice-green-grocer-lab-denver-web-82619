@@ -42,7 +42,7 @@ cart
 end
 
 
-def checkout(cart: [], coupons: [])
+def checkout(cart, coupons)
   cart = consolidate_cart(cart: cart)
 end 
 
