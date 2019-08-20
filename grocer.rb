@@ -43,5 +43,7 @@ end
 
 
 def checkout(cart, coupons)
+  total_due = 0 
+  
 
 end
