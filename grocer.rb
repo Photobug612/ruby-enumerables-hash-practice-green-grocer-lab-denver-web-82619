@@ -44,7 +44,8 @@ end
 
 def checkout(cart: [], coupons: [])
   cart = consolidate_cart(cart: cart)
-end 	  cart = apply_coupons(cart: cart, coupons: coupons)
+end 	  
+cart = apply_coupons(cart: cart, coupons: coupons)
   cart = apply_clearance(cart: cart)
   total = 0
   cart.each {|grocery,value| total += (cart[grocery][:price] * cart[grocery][:count]) if cart[grocery][:count] > 0}
