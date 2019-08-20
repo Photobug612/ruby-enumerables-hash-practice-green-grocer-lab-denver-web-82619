@@ -42,13 +42,13 @@ cart
 end
 
 
-def checkout(cart, coupons)
-  t = 0 
-  updated_cart = consolidate_cart(cart)
-  coupons = apply_coupons(updated_cart, coupons)
-  clearance = apply_clearance(coupons)
-  clearance.each do |item, a|
-    total += (a[:price]* a[:count])
-  end
-  total = (total * 0.9) if total > 100 total 
+def checkout(cart, coupons) 
+  running_total = 0 
+  new_cart = consolidate_cart(cart) 
+  coupons = c(new_cart, coupons) 
+  clearance = discount(coupon_cart) 
+  clearance.each do |item, a| 
+    running_total += (a[:price] * a[:count])
+  end 
+running_total = (running_total * 0.9) if running_total > 100 running_total 
 end
