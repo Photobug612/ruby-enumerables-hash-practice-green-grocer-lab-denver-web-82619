@@ -51,6 +51,6 @@ all_clearance = apply_clearance(cart)
 all_clearance.each do |item, attribute_hash| 
   total += (attribute_hash[:price] * attribute_hash[:count]) 
  end
- total_due = (total_due * 0.9) if total_due > 100 total_due
+  total > 100 ? (total*0.9).round(2) : total
 end
 
