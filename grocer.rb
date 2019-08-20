@@ -42,4 +42,4 @@ cart
 end
 
 
-def checkout
+def checkout(cart, coupons)
