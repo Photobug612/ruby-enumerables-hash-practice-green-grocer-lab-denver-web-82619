@@ -50,6 +50,4 @@ all_clearance = apply_clearance(cart)
 
 all_clearance.each do |item, attribute_hash| 
   total += (attribute_hash[:price] * attribute_hash[:count]) 
-end
-
-end
+ end
