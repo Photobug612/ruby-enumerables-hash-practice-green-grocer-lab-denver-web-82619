@@ -43,4 +43,6 @@ end
 
 
 def checkout(cart, coupons)
+  cart.each do |item, a|
+    
 end
